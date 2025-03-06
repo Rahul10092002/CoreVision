@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Header({
   isMenuOpen,
   setIsMenuOpen,
@@ -24,6 +26,13 @@ export default function Header({
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="flex items-center">
+            <Image
+              src="/WEBP.webp"
+              width={40}
+              height={40}
+              alt="CoreVision"
+              className=""
+            />
             <span className="text-3xl font-bold">
               <span className="gradient-text">CoreVision</span>
             </span>

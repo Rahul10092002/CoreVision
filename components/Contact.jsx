@@ -109,7 +109,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-800">Email</p>
-                    <p className="text-gray-600">hello@corevisionedits.com</p>
+                    <p className="text-gray-600">info@corevisions.in</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -133,7 +133,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-800">Website</p>
-                    <p className="text-gray-600">www.corevisionedits.com</p>
+                    <p className="text-gray-600">www.corevisions.in</p>
                   </div>
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function Contact() {
               <h3 className="text-xl font-bold mb-4">Follow Us</h3>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/corevisiondigital/"
                   className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center hover:bg-orange-200 transition-colors"
                 >
                   <svg
@@ -172,7 +172,7 @@ export default function Contact() {
                   <span className="sr-only">Instagram</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://youtube.com/@corevision-p8h?si=MLPj-wO1EUV26SN8"
                   className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center hover:bg-blue-200 transition-colors"
                 >
                   <svg
@@ -193,7 +193,7 @@ export default function Contact() {
                   <span className="sr-only">YouTube</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/106620205/admin/dashboard/"
                   className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center hover:bg-orange-200 transition-colors"
                 >
                   <svg

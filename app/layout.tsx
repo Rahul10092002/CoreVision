@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "CoreVision is a strategic video marketing and digital growth agency dedicated to helping brands maximize their impact through high-quality content and innovative marketing strategies.",
   generator: "Next.js",
+  icons: {
+    icon: "/favicon.ico", 
+  },
 };
 
 export default function RootLayout({

@@ -36,24 +36,32 @@ export default function Pricing() {
       ],
       popular: false,
     },
-  ]
+  ];
 
   return (
-    <section id="pricing" className="py-20 bg-gradient-to-b from-black to-gray-900">
+    <section
+      id="pricing"
+      className="py-20 bg-gradient-to-b from-black to-blue-900/30"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">Pricing & Packages</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">
+            Pricing & Packages
+          </h2>
           <p className="text-gray-300">
-            We offer flexible pricing based on your project needs. Choose the package that works for you or contact us
-            for a custom quote.
+            We offer flexible pricing based on your project needs. Choose the
+            package that works for you or contact us for a custom quote.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {packages.map((pkg, index) => (
-            <div key={index} className="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden relative">
+            <div
+              key={index}
+              className="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden relative"
+            >
               {pkg.popular && (
-                <div className="absolute top-0 right-0 bg-purple-600 text-white px-3 py-1 text-xs font-bold">
+                <div className="absolute top-0 right-0 bg-orange-500 text-white px-3 py-1 text-xs font-bold">
                   POPULAR
                 </div>
               )}
@@ -73,7 +81,7 @@ export default function Pricing() {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="h-5 w-5 text-purple-500"
+                        className="h-5 w-5 text-orange-500"
                       >
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
@@ -83,7 +91,7 @@ export default function Pricing() {
                 </div>
               </div>
               <div className="p-6 border-t border-gray-800">
-                <button className="w-full py-2 px-4 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                <button className="w-full py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-gray-900">
                   Get Started
                 </button>
               </div>
@@ -95,13 +103,12 @@ export default function Pricing() {
           <div className="inline-block bg-gray-800 rounded-lg p-6 max-w-2xl">
             <h3 className="text-xl font-bold mb-2">Need a custom solution?</h3>
             <p className="text-gray-300 mb-4">
-              We offer tailored packages for specific project requirements. Contact us for a personalized quote.
+              We offer tailored packages for specific project requirements.
+              Contact us for a personalized quote.
             </p>
-           
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-

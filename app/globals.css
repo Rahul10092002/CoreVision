@@ -10,42 +10,20 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 262.1 83.3% 57.8%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --primary: 30 100% 50%; /* Orange */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 100% 50%; /* Blue */
+    --secondary-foreground: 0 0% 98%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 210 100% 50%; /* Blue */
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 262.1 83.3% 57.8%;
+    --ring: 30 100% 50%; /* Orange */
     --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 262.1 83.3% 57.8%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 262.1 83.3% 57.8%;
   }
 
   html {
@@ -54,11 +32,35 @@
   }
 
   body {
-    @apply bg-black text-white;
+    @apply bg-white text-gray-800;
   }
 
   * {
     @apply border-border;
   }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #ff8a00 0%, #1e3a8a 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff8a00, #1e3a8a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.orange-gradient {
+  background: linear-gradient(90deg, #ff8a00, #ff5f00);
+}
+
+.blue-gradient {
+  background: linear-gradient(90deg, #1e3a8a, #0f2557);
+}
+
+.orange-to-blue-gradient {
+  background: linear-gradient(135deg, #ff8a00 0%, #1e3a8a 100%);
 }
 

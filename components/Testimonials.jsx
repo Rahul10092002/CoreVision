@@ -2,38 +2,50 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote:
-        "CoreVision transformed my raw footage into a stunning YouTube video! Professional and fast. I'll definitely be using their services again for my channel.",
+        "CoreVision transformed our digital presence with their strategic video marketing approach. Our engagement increased by 150% within just two months!",
       author: "Emma R.",
-      role: "Content Creator",
+      role: "Marketing Director",
       initials: "ER",
     },
     {
       quote:
-        "The best video editing service for our brand. Highly recommended! Their team understood our vision perfectly and delivered beyond our expectations.",
+        "The best digital marketing team we've worked with. Their data-driven approach and AI-powered strategies delivered measurable ROI for our brand.",
       author: "Mark T.",
-      role: "Marketing Manager",
+      role: "CEO, Tech Startup",
       initials: "MT",
     },
     {
       quote:
-        "CoreVision edited our wedding video and we couldn't be happier. They captured all the special moments perfectly and created a beautiful story.",
+        "CoreVision helped us build a comprehensive video marketing strategy that aligned perfectly with our business goals. Highly recommended!",
       author: "Jennifer S.",
-      role: "Wedding Client",
+      role: "E-commerce Founder",
       initials: "JS",
     },
-  ]
+  ];
 
   return (
-    <section id="testimonials" className="py-20 bg-black">
+    <section
+      id="testimonials"
+      className="py-20 orange-to-blue-gradient bg-opacity-10"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">Client Testimonials</h2>
-          <p className="text-gray-300">Hear what our clients have to say about our video editing services.</p>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">
+            Client Testimonials
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-blue-900 mx-auto mb-8"></div>
+          <p className="text-gray-700">
+            Hear what our clients have to say about our video marketing and
+            growth strategies.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-900 border border-gray-800 rounded-lg p-6">
+            <div
+              key={index}
+              className="bg-white border border-gray-200 rounded-lg p-6 shadow-md"
+            >
               <div className="flex items-center gap-2 mb-4">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <svg
@@ -49,14 +61,16 @@ export default function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-300 mb-6">{testimonial.quote}</p>
+              <p className="text-gray-700 mb-6">{testimonial.quote}</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full orange-to-blue-gradient flex items-center justify-center text-white">
                   <span className="font-bold">{testimonial.initials}</span>
                 </div>
                 <div>
-                  <p className="font-bold">{testimonial.author}</p>
-                  <p className="text-sm text-gray-400">{testimonial.role}</p>
+                  <p className="font-bold text-gray-800">
+                    {testimonial.author}
+                  </p>
+                  <p className="text-sm text-gray-600">{testimonial.role}</p>
                 </div>
               </div>
             </div>
@@ -64,6 +78,5 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

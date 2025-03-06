@@ -1,33 +1,22 @@
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gray-800 bg-black py-12">
+    <footer className="border-t border-gray-200 bg-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-6 w-6 text-purple-500"
-              >
-                <path d="M12 2v8"></path>
-                <rect x="2" y="10" width="20" height="12" rx="2"></rect>
-                <path d="m6 20 4-4 4 4 4-4"></path>
-              </svg>
-              <span className="text-xl font-bold">CoreVision</span>
+              <span className="text-2xl font-bold">
+                <span className="gradient-text">CoreVision</span>
+              </span>
             </div>
-            <p className="text-gray-400">Elevate Your Story with Stunning Edits</p>
+            <p className="text-gray-600">Where Creativity Meets Growth</p>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-500 hover:text-orange-500 transition-colors"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -46,7 +35,10 @@ export default function Footer() {
                 </svg>
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-500 hover:text-orange-500 transition-colors"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -64,7 +56,10 @@ export default function Footer() {
                 </svg>
                 <span className="sr-only">YouTube</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-500 hover:text-orange-500 transition-colors"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -87,61 +82,91 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4">Services</h3>
+            <h3 className="font-bold text-lg mb-4 text-gray-800">Services</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  YouTube & Social Media
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
+                  Video Marketing Strategy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  Corporate Videos
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
+                  Content Production
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  Event & Wedding Films
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
+                  Social Media Management
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  Commercial & Ads
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
+                  Ad Campaign Management
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  Documentaries & Films
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
+                  Website Development
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4">Company</h3>
+            <h3 className="font-bold text-lg mb-4 text-gray-800">Company</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
                   Portfolio
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
                   Testimonials
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  Pricing
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
+                  Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
                   Contact
                 </a>
               </li>
@@ -149,20 +174,29 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4">Legal</h3>
+            <h3 className="font-bold text-lg mb-4 text-gray-800">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-purple-500 transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-600 hover:text-orange-500 transition-colors"
+                >
                   Cookie Policy
                 </a>
               </li>
@@ -170,11 +204,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
+        <div className="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600 text-sm">
           <p>&copy; {currentYear} CoreVision. All rights reserved.</p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

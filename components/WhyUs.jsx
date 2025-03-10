@@ -1,4 +1,13 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function WhyUs() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+
   const reasons = [
     {
       title: "Data-Driven Strategies",
@@ -93,13 +102,30 @@ export default function WhyUs() {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section
-      id="why-us"
-      className="py-20 orange-to-blue-gradient bg-opacity-10"
-    >
+    <section id="why-us" className="py-20 bg-gray-50" ref={sectionRef}>
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div
+          className="text-center max-w-3xl mx-auto mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.7 }}
+        >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">
             Why Choose CoreVision?
           </h2>
@@ -108,22 +134,35 @@ export default function WhyUs() {
             We deliver exceptional quality with a focus on your unique vision
             and business goals.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
           {reasons.map((reason, index) => (
-            <div
+            <motion.div
               key={index}
-              className="flex gap-4 bg-white p-6 rounded-lg shadow-md"
+              className="flex gap-4 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+              variants={itemVariants}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
-              <div className="flex-shrink-0 mt-1">{reason.icon}</div>
+              <motion.div
+                className="flex-shrink-0 mt-1"
+                whileHover={{ rotate: 10, scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                {reason.icon}
+              </motion.div>
               <div>
                 <h3 className="text-xl font-bold mb-2">{reason.title}</h3>
                 <p className="text-gray-700">{reason.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

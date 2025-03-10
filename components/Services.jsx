@@ -1,154 +1,84 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import {
+  Briefcase,
+  FileVideo,
+  LucideBrainCircuit,
+  Monitor,
+  MonitorSmartphone,
+} from "lucide-react";
+import { FaTwitterSquare } from "react-icons/fa";
+
 export default function Services() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+
   const services = [
     {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="h-6 w-6 text-orange-500"
-        >
-          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <path d="m10 11 5 3-5 3v-6Z"></path>
-        </svg>
-      ),
+      icon: <FileVideo className="h-6 w-6 text-red-500" />,
       title: "Video Marketing Strategy",
       description:
         "Comprehensive video marketing plans tailored to your business goals and target audience.",
     },
     {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="h-6 w-6 text-blue-500"
-        >
-          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-          <line x1="8" y1="21" x2="16" y2="21"></line>
-          <line x1="12" y1="17" x2="12" y2="21"></line>
-        </svg>
-      ),
+      icon: <Monitor className="h-6 w-6 text-green-500" />,
       title: "Content Production",
       description:
         "High-quality video creation and editing that captures your brand's unique voice and message.",
     },
     {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="h-6 w-6 text-orange-500"
-        >
-          <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
-          <circle cx="12" cy="13" r="3"></circle>
-        </svg>
-      ),
+      icon: <FaTwitterSquare className="h-6 w-6 text-sky-500" />,
       title: "Social Media Management",
       description:
         "End-to-end social media strategy, content creation, and community engagement.",
     },
     {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="h-6 w-6 text-blue-500"
-        >
-          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
-          <path d="M3 6h18"></path>
-          <path d="M16 10a4 4 0 0 1-8 0"></path>
-        </svg>
-      ),
+      icon: <Briefcase className="h-6 w-6 text-purple-500" />,
       title: "Ad Campaign Management",
       description:
         "Strategic planning, execution, and optimization of paid advertising campaigns across platforms.",
     },
     {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="h-6 w-6 text-orange-500"
-        >
-          <path d="M12 2v8"></path>
-          <rect x="2" y="10" width="20" height="12" rx="2"></rect>
-          <path d="m6 20 4-4 4 4 4-4"></path>
-        </svg>
-      ),
+      icon: <MonitorSmartphone className="h-6 w-6 text-yellow-500" />,
       title: "Website Development",
       description:
         "Conversion-focused website design and development that aligns with your marketing goals.",
     },
     {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="h-6 w-6 text-blue-500"
-        >
-          <path d="M15 4V2"></path>
-          <path d="M15 16v-2"></path>
-          <path d="M8 9h2"></path>
-          <path d="M20 9h2"></path>
-          <path d="M17.7 11.7 19 13"></path>
-          <path d="M15 9h0"></path>
-          <path d="M17.7 6.3 19 5"></path>
-          <path d="M3 21l9-9"></path>
-          <path d="M12.2 12.2 12 12"></path>
-        </svg>
-      ),
+      icon: <LucideBrainCircuit className="h-6 w-6 text-gray-600" />,
       title: "AI-Powered Solutions",
       description:
         "Cutting-edge AI tools for content creation, audience targeting, and marketing automation.",
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-white" ref={sectionRef}>
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div
+          className="text-center max-w-3xl mx-auto mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.7 }}
+        >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">
             Our Services
           </h2>
@@ -157,24 +87,35 @@ export default function Services() {
             We specialize in comprehensive video marketing and digital
             strategies for businesses and content creators.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+              className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+              variants={itemVariants}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
               <div className="p-6">
-                <div className="mb-4 w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center">
+                <motion.div
+                  className="mb-4 w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center"
+                  whileHover={{ rotate: 5, scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
                   {service.icon}
-                </div>
+                </motion.div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-gray-700">{service.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

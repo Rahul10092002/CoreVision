@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -61,13 +62,15 @@ export default function LandingPage() {
       />
 
       <main className="flex-1">
-        <Hero />
-        <About />
-        <Services />
-        <WhyUs />
-        <Portfolio />
-        <Testimonials />
-        <Contact />
+        <AnimatePresence>
+          <Hero />
+          <About />
+          <Services />
+          <WhyUs />
+          <Portfolio />
+          <Testimonials />
+          <Contact />
+        </AnimatePresence>
       </main>
 
       <Footer />

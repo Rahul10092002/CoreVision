@@ -1,16 +1,35 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function About() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-gray-50" ref={sectionRef}>
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div
+          className="text-center max-w-3xl mx-auto mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.7 }}
+        >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">
             About CoreVision
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-blue-900 mx-auto mb-8"></div>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-6">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.7 }}
+          >
             <div>
               <h3 className="text-2xl font-bold mb-4">Who We Are</h3>
               <p className="text-gray-700">
@@ -31,9 +50,14 @@ export default function About() {
                 attention but also drive measurable growth.
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="space-y-6">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
             <div>
               <h3 className="text-2xl font-bold mb-4">What We Do</h3>
               <p className="text-gray-700">
@@ -53,7 +77,7 @@ export default function About() {
                 known for creativity, innovation, and data-driven results.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

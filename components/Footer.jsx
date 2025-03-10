@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -5,7 +9,12 @@ export default function Footer() {
     <footer className="border-t border-gray-200 bg-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
+          <motion.div
+            className="space-y-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
             <div className="flex items-center gap-2">
               <span className="text-2xl font-bold">
                 <span className="gradient-text">CoreVision</span>
@@ -13,9 +22,11 @@ export default function Footer() {
             </div>
             <p className="text-gray-600">Where Creativity Meets Growth</p>
             <div className="flex gap-4">
-              <a
+              <motion.a
                 href="#"
                 className="text-gray-500 hover:text-orange-500 transition-colors"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -34,10 +45,12 @@ export default function Footer() {
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
                 <span className="sr-only">Instagram</span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="#"
                 className="text-gray-500 hover:text-orange-500 transition-colors"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -55,10 +68,12 @@ export default function Footer() {
                   <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
                 </svg>
                 <span className="sr-only">YouTube</span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="#"
                 className="text-gray-500 hover:text-orange-500 transition-colors"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -77,136 +92,192 @@ export default function Footer() {
                   <circle cx="4" cy="4" r="2"></circle>
                 </svg>
                 <span className="sr-only">LinkedIn</span>
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
             <h3 className="font-bold text-lg mb-4 text-gray-800">Services</h3>
             <ul className="space-y-2">
-              <li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Video Marketing Strategy
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Content Production
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Social Media Management
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Ad Campaign Management
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Website Development
                 </a>
-              </li>
+              </motion.li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+          >
             <h3 className="font-bold text-lg mb-4 text-gray-800">Company</h3>
             <ul className="space-y-2">
-              <li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   About Us
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Portfolio
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Testimonials
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Blog
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Contact
                 </a>
-              </li>
+              </motion.li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+          >
             <h3 className="font-bold text-lg mb-4 text-gray-800">Legal</h3>
             <ul className="space-y-2">
-              <li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Privacy Policy
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Terms of Service
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <a
                   href="#"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Cookie Policy
                 </a>
-              </li>
+              </motion.li>
             </ul>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600 text-sm">
+        <motion.div
+          className="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600 text-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.8 }}
+        >
           <p>&copy; {currentYear} CoreVision. All rights reserved.</p>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
